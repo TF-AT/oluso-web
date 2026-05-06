@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Oluṣọ — Silent, Intelligent Personal Safety
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Oluṣọ is a premium, tech-forward personal safety companion engineered for high-risk environments in Nigeria and across Africa. This repository contains the source code for the official Oluṣọ landing page, designed for the May 19th soft launch.
 
-Currently, two official plugins are available:
+## 🛡️ Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The landing page serves as the primary distribution hub for the Oluṣọ Android application during its initial soft launch phase. It emphasizes the "Vigilant Guardian" theme—providing absolute reliability when seconds count, without drawing attention to the user.
 
-## React Compiler
+### Key Features Showcased:
+- **Invisible Triggers**: SOS activation via physical volume buttons or double-shake gestures.
+- **Duress Mode**: A "Fake Cancel" PIN safety feature that silently maintains responder contact.
+- **Threat Wire**: Real-time local security intelligence network (Coming Soon).
+- **Direct APK Distribution**: Facilitating easy installation during the Play Store pre-launch phase.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎨 Visual Identity
 
-## Expanding the ESLint configuration
+The project follows the **Vigilant Guardian** design specification:
+- **Background**: `#0a0a0c` (Deep Charcoal)
+- **Primary**: `#e53935` (Urgent Red - used for SOS and primary actions)
+- **Accent**: `#ffb300` (Warm Gold - used for status and intelligence highlights)
+- **Typography**: Outfit (Headings) & Inter (Body)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technology Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Vanilla CSS (Externalized classes for performance and maintainability)
+- **Deployment**: Optimized for Vercel / Netlify / GitHub Pages
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+- Node.js (v18.0 or higher)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TF-AT/oluso-web.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+Run the development server:
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Build
+Generate the production bundle:
+```bash
+npm run build
 ```
+
+## 📦 Deployment
+
+The project is configured for continuous deployment. Simply connect this repository to your hosting provider of choice (Vercel/Netlify).
+
+---
+
+© 2026 Oluṣọ Tech. Institutional-grade security for the modern citizen.

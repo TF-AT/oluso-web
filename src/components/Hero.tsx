@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 const Hero: React.FC = () => {
-  const APK_URL = "#"; // Replace with actual APK link when ready
+  const APK_URL = "/oluso-v1.apk";
   
   const scrollToInstall = () => {
     document.getElementById('install')?.scrollIntoView({ behavior: 'smooth' });
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           </p>
 
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            <a href={APK_URL} className="btn btn-primary">
+            <a href={APK_URL} download className="btn btn-primary">
               Download Now <span>📥</span>
             </a>
             <button onClick={scrollToInstall} className="btn btn-secondary">

@@ -1,0 +1,344 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav-logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(229, 57, 53, 0.3);
+}
+
+.nav-logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--on-background);
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--on-surface-muted);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--on-background);
+}
+
+.nav-user {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.nav-user:hover {
+  border-color: var(--primary);
+}
+
+/* Hero */
+.hero {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-image: radial-gradient(circle at top right, rgba(229, 57, 53, 0.05), transparent), radial-gradient(circle at bottom left, rgba(20, 20, 22, 1), #050505);
+  overflow: hidden;
+}
+
+.hero-pulse {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(229, 57, 53, 0.03) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: clamp(40px, 8vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--on-surface-muted);
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+
+.hero-trust {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  padding: 40px;
+  border-radius: 24px;
+  transition: 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  border-color: rgba(229, 57, 53, 0.3);
+  transform: translateY(-5px);
+}
+
+.feature-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  border: 1px solid transparent;
+}
+
+.feature-card.threat-wire .feature-icon-wrapper {
+  background-color: var(--accent-soft);
+  border-color: rgba(255, 179, 0, 0.2);
+  box-shadow: var(--accent-glow);
+}
+
+.feature-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.feature-card.threat-wire h3 {
+  color: var(--accent);
+}
+
+/* Stats */
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stat-item-group {
+  display: flex;
+  gap: 48px;
+}
+
+.stat-value {
+  font-size: 40px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--on-surface-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Installation Guide */
+.install-container {
+  background-color: var(--surface);
+  border-radius: 32px;
+  padding: 60px;
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  align-items: center;
+  background-image: radial-gradient(circle at top right, rgba(255, 179, 0, 0.03), transparent);
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.install-mockup {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 16/9;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+}
+
+/* Workflow */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 80px;
+  align-items: center;
+}
+
+.phone-mockup {
+  width: 280px;
+  height: 560px;
+  background-color: #000;
+  border-radius: 32px;
+  border: 8px solid #222;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+.phone-screen {
+  flex: 1;
+  background: radial-gradient(circle at center, rgba(229, 57, 53, 0.15), transparent);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.phone-sos-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulseRed 3s infinite;
+}
+
+/* Footer */
+.footer {
+  padding: 80px 0 40px;
+  background-color: var(--background);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.footer-logo-section {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-section {
+    grid-column: span 1;
+  }
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--on-surface-muted);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--on-surface-muted);
+}

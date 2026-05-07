@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 const Hero: React.FC = () => {
-  const APK_URL = "/oluso-v1.apk";
+  const APK_URL = "/downloads/oluso.apk";
   
   const scrollToInstall = () => {
     document.getElementById('install')?.scrollIntoView({ behavior: 'smooth' });
